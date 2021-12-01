@@ -1,0 +1,136 @@
+/* slider */
+.slider {
+    margin: 70px auto;
+}
+.slider img{
+    width:100%;
+    object-fit: cover;
+    animation: change 5s;
+    cursor: pointer;
+    animation: change ease-in-out 1s;
+}
+@keyframes change {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/* container */
+.container{
+    
+    /* height:100%; */
+}
+.name{
+    text-align: center;
+    margin:20px;
+}
+.container .produce{
+    /* background-color:#ddd; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.bonus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ddd; */
+    height: 80px;
+    margin-bottom: 5px;
+}
+.bonus a{
+    display: block;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    color: black;
+}
+.bonus a:hover{
+    color:chocolate ;
+}
+.container .produce .list-item{
+    width: 20%;
+    height:360px;
+    margin-right: 12px;
+    margin:10px;
+    box-shadow: 0 5px 5px #ccc;
+   
+   
+}
+.container .produce .item{
+    
+    height:300px;
+    /* margin-left: 20px; */
+}
+.container .produce .item img{
+    width:100%;
+   
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform ease-out 0.5s;
+}
+.container .produce .item img:hover{
+   transform: scale(0.9);
+}
+@keyframes img{
+    from{
+        opacity: 0.7;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.container .produce .item .produce-infor{
+    height: 60px;
+
+}
+.container .produce .item .produce-infor .namepr{
+    height: 85px;
+    font-size: 16px;
+    padding-left: 3px;
+    text-transform: capitalize;
+    color: black;
+}
+.text-strike{
+    padding-left: 3px;
+    font-size: 16px;
+    text-decoration: line-through;
+    color:black;
+   
+}
+.text-bold{
+    font-size: 22px;
+    margin-left: 10px;
+    /* color: #ee4d2d; */
+    color:orangered;
+}
+@media screen and (max-width:739px) {
+    .container .produce{
+        justify-content: space-around;
+     }
+     .container .produce .list-item{
+         width: 40%;
+     }
+     .container .produce .item{
+         margin-left: 0;
+     }
+     .text-bold{
+         margin-left:0;
+     }
+ 
+     .container .produce .item .produce-infor .namepr{
+         font-size:14px;   
+     }
+    
+}

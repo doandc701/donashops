@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    display: block;
+}
+html{
+    font-family:Poppins-Regular, sans-serif !important;
+    font-size:14px;
+}
+.main a{
+    text-decoration:none ;
+    color: black;
+}
+.main{
+    width:100%;
+ 
+
+}
+ .banner{
+    /* margin: 50px; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:70px;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    background-color:#ddd; 
+  
+}
+.logo{
+    width:400px;
+    display: inline-block;
+    font-size:18px;
+    font-weight:700;
+    
+}
+.nav_bars{
+    font-weight:700;
+    width:28px;
+    height:28px;
+    font-size:20px;
+    display: none;
+}
+.navgation{
+    display: inline-block;
+  
+}
+.navgation >ul {
+    list-style: none;
+}
+.navgation >ul > li{
+    display:inline-block;
+    margin-left: 50px;
+    position: relative;
+}
+.navgation >ul >li >a{
+    text-decoration: none;
+   font-size: 18px;
+   color: black;
+   text-transform: unset;
+
+}
+.navgation >ul >li >a:hover{
+   opacity: 0.5;
+
+}
+
+ul.submenu{
+    padding-top: 18px;
+    width:150px;
+    background-color:#ddd; 
+    z-index: 1;
+    opacity: 0.9;
+    min-height: 100px;
+    display: none;
+    position: absolute;
+}
+ul.submenu li{
+    padding-left: 18px;
+    margin-top: 10px;
+    list-style: none;
+}
+ul.submenu li a{
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    /* text-transform: unset; */
+    white-space: nowrap;
+}
+.navgation >ul > li:hover ul.submenu{
+    display: block;
+}
+.navgation ul li a:hover{
+    opacity: 0.5;
+}
+
+.nav_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+/* search */
+.search-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* input setup */
+.search-box .input-box{
+    position: relative;
+    background: rgb(33,82,115);
+    padding: 8px;
+    border-radius: 30px;
+    width: 0;
+    transition:1s ;
+    padding-left: 12px;
+
+
+}
+
+.search-box .input-box input{
+    width:100%;
+    background:transparent;
+    padding-right: 50px;
+    border:none;
+    outline:none;
+    color:white;
+    font-size: 17px;
+    text-transform: capitalize;
+
+
+}
+.search-box .input-box input::placeholder{
+    color:rgb(170,170,170);
+
+}
+/* search-button */
+.search-box .search-button{
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    display:flex;
+    background: rgb(54,157,158);
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    right:-4px;
+    box-shadow: 0 0 0 6px navy;
+    cursor: pointer;
+}
+.search-box:hover >.input-box{
+    width:210px;
+}
+
+/* .limiter */
+.limiter{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:none;
+    animation:loginFadeIn ease .5s;
+}
+@keyframes loginFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+.limiter.open{
+    display:flex;
+}
+/* footer */
+.footer{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000000;
+}
+.name-footer{
+    color: #ccc;
+}
+.footer .list-services{
+    display:flex;
+    justify-content: space-around;
+}
+.community{
+ 
+}
+ul.root li{
+
+    list-style: none;
+}
+ul.root li a{
+    display:block;
+    font-size: 16px;
+    margin-top: 20px;
+    color:#fff;
+}
+ul.root li a:hover{
+    opacity: 0.8;
+}
+.copyright{
+   
+    background-color:#000000;
+}
+.copyright .text{
+    font-size: 16px;
+    color:#fff;
+    text-align: center;
+    display:block;
+}
+@media screen and (max-width:739px) {
+    .nav_bars{
+        display: block;
+        padding-right: 15px;
+    }
+    .footer .list-services{
+        flex-direction: column;
+    }
+    ul.root li{
+        text-align: center;
+    }
+    ul.root li a{
+        margin:20px;
+    }
+    .nav_overlay {
+        display:none;
+    }
+    .navgation{
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        width:200px;
+        max-width: 100%;
+        background-color:#fff;
+        border-top-left-radius:20px;
+        transform: translateX(100%);
+        transition:transform linear 0.5s;
+        
+    }
+    .navgation >ul > li{
+        margin-top: 10px;
+    }
+    .navgation >ul >li >a{
+        display:block;
+        padding:8px 0;
+    }
+    .search-box{
+        display: none;
+    }
+
+    /* hiện */
+    .nav_overlay_show{
+        display:block;
+
+    }
+    .navgation_show{
+        transform: translateX(0);
+
+    }
+
+}
